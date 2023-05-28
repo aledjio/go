@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	minute := time.Now().Minute()
+	second := time.Now().Second()
+	fmt.Printf("Now %d minute ", minute)
+	fmt.Printf("and %d second\n", second)
+
+	switch {
+	case minute < second:
+		fmt.Println("Minute is less than second")
+	case minute > second:
+		fmt.Println("Minute is bigger than second")
+	default:
+		fmt.Println("Minute is equal to second. You win!")
+	}
+}
